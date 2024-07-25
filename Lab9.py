@@ -1,13 +1,9 @@
 def encode(num):
-    encoded_num = ''
-    for char in num:
-        encoded_num += str((int(char) + 3) % 10)
-    return encoded_num
+    return ''.join(str((int(char) + 3) % 10) for char in num)
+
 def decode(number):
-    result = ''
-    for char in number:
-        result += str((int(char) - 3) % 10)
-    return result
+    return ''.join(str((int(char) - 3) % 10) for char in number)
+
 
 
 def main():
